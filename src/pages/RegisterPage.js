@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // styles
@@ -66,19 +66,27 @@ const LoginPage = () => {
     return (
         <Wrapper>
             <FormStyled action="">
-                <TitleStyled>Login</TitleStyled>
+                <TitleStyled>Register</TitleStyled>
                 <FormGroup>
                     <Label for="username">Username</Label>
                     <Input type="text" placeholder="username" />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="password">Password</Label>
-                    <Input type="password" placeholder="password" />
+                    <Label for="username">Email Address</Label>
+                    <Input type="email" placeholder="john@gmail.com" />
                 </FormGroup>
-                <Button>Login</Button>
+                <FormGroup>
+                    <Label for="password">Choose password</Label>
+                    <Input type="password" placeholder=" choose password" />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="password">Confirm password</Label>
+                    <Input type="password" placeholder=" choose password" />
+                </FormGroup>
+                <Button>Register</Button>
                 <StyledParagraph>
-                    Don't have an account? Register{' '}
-                    <RegisterLink href="Register">here!</RegisterLink>
+                    Already have an account? Login{' '}
+                    <RegisterLink href="/">here!</RegisterLink>
                 </StyledParagraph>
             </FormStyled>
         </Wrapper>
